@@ -53,7 +53,7 @@ class Song
     song
   end
   
-  def self.create_from_filename
+  def self.create_from_filename(filename)
     data = filename.split(" - ")
     artist_name = data[0]
     song_name_data = data[1].split(".")
@@ -65,7 +65,7 @@ class Song
     self.all << song  
   end
   
-  def self.detroy_all
+  def self.destroy_all
     self.all.clear
   end
   
